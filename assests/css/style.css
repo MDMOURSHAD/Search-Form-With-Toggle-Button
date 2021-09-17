@@ -1,0 +1,372 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+
+/*
+========================================
+Start Basic Setup
+========================================
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a,
+span,
+label {
+  display: inline-block;
+}
+
+a,
+a:focus {
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 0;
+  border: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+p,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*
+========================================
+End Basic Setup
+========================================
+*/
+
+header nav {
+  background: #19283f;
+  padding: 20px 0px;
+  width: 100%;
+}
+
+header nav .main-menu ul {
+  list-style: none;
+  margin-bottom: 0;
+}
+
+header nav .main-menu ul li:not(:last-child) {
+  margin-right: 40px;
+}
+
+header nav .main-menu ul li a {
+  font-weight: 400;
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.sticky-details {
+  text-align: center;
+  padding: 60px 0px;
+}
+
+.sticky-details h2 {
+  font-weight: 700;
+  font-size: 50px;
+  text-transform: capitalize;
+}
+
+.sticky-details p {
+  width: 100%;
+  margin: 30px auto;
+  text-align: center;
+  line-height: 25px;
+  font-size: 17px;
+}
+
+
+/*
+===================================
+Start Toggle Search Bar
+===================================
+*/
+
+.search-wrapper {
+  position: relative;
+}
+
+.search-field {
+  cursor: default;
+  width: 350px;
+  position: absolute;
+  border-radius: 3px;
+  padding: 15px 15px;
+  visibility: hidden;
+  opacity: 0;
+  top: 45px;
+  right: 4px;
+  background: #fff;
+  transition: .4s ease-in !important;
+  top: 50px;
+  right: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.search-field form {
+  width: 100%;
+  display: flex;
+  border-radius: 30px;
+  padding: 6px 6px;
+  background: #ddd;
+  font-size: 17px;
+  text-transform: capitalize;
+}
+
+.search-field form input[type=text] {
+  width: 75%;
+  background: transparent;
+  padding-left: 10px;
+  padding-right: 5px;
+  color: #111;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.search-field form input[type=text]::placeholder {
+  font-size: 17px;
+  text-transform: capitalize;
+  font-weight: 400;
+  color: #111;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search-field form input[type=submit] {
+  width: 25%;
+  padding: 10px 0px;
+  border-radius: 30px;
+  font-size: 18px;
+  color: #111;
+  background: #fff;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+}
+
+.active {
+  visibility: visible;
+  opacity: 1;
+}
+/*
+===================================
+End Toggle Search Bar
+===================================
+*/
+
+@media(max-width: 575px){
+
+  /*
+  ===================================
+  Start Toggle Search Bar
+  ===================================
+  */
+  .search-field {
+    padding: 8px 8px;
+    width: 280px;
+  }
+  .search-field form {
+    padding: 4px 4px;
+  }
+  /*
+  ===================================
+  End Toggle Search Bar
+  ===================================
+  */
+}
+
+/*
+===================================
+Start Sticky Menu
+===================================
+*/
+
+.sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  padding: 15px 0 !important;
+  transition: .3s ease-in;
+  -webkit-transition: .4s linear;
+}
+
+
+/*
+===================================
+End Sticky Menu
+===================================
+*/
+
+
+/*
+====================
+Start Preloader
+====================
+*/
+
+.preloader {
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #fff;
+}
+
+
+/*
+====================
+End Preloader
+====================
+*/
+
+
+/*
+===================================
+Start Scroll to Top 
+===================================
+*/
+
+.scroll-top {
+  display: none;
+  position: fixed;
+  right: 30px;
+  height: 40px;
+  width: 40px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 3px;
+  line-height: 40px;
+  text-align: center;
+  background: #f54748;
+  bottom: 40px;
+}
+
+
+/* Bob */
+
+@-webkit-keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+@-webkit-keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+.hvr-bob {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.hvr-bob:hover,
+.hvr-bob:focus,
+.hvr-bob:active {
+  -webkit-animation-name: hvr-bob-float, hvr-bob;
+  animation-name: hvr-bob-float, hvr-bob;
+  -webkit-animation-duration: .4s, 1.5s;
+  animation-duration: .4s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}
+
+
+/*
+===================================
+End Scroll to Top 
+===================================
+*/
